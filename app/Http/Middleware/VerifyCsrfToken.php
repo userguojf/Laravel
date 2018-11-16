@@ -24,6 +24,6 @@ class VerifyCsrfToken extends Middleware
         // https://laravel- china.org/docs/laravel/5.6/csrf/1365
         'stripe/*',
         'http://localhost:8823/*',
-        'http://123.207.166.54/*'
+        'http://guojf.com/*'
     ];
 }
