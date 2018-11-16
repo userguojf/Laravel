@@ -17,11 +17,5 @@ Route::get('/', function () {
 
 /*-------------------------------- 测试相关 ----------------------------------*/
 $router->group(['prefix' => 'test'], function () use ($router) {
-    $router->get('/test1', 'TestController@test1');
-    $router->get('/test2', 'TestController@test2');
-});
-
-$router->group(['prefix' => 'test1'], function () use ($router) {
-    $router->get('/test1', 'Test1Controller@test1');
-    $router->get('/test2', 'Test1Controller@test2');
+    $router->post('/create', 'TestController@create');
 });

@@ -8,21 +8,27 @@
 
 namespace App\Http\Controllers;
 
-class TestController extends TestBaseController
+use Illuminate\Http\Request;
+use App\Repository\TestRepository;
+
+class TestController extends BaseController
 {
+    private $testRepository;
 
-    public function __construct($name = 'wangdk')
+    public function __construct(TestRepository $repository)
     {
-        parent::__construct($name);
-    }
-    public function test1()
-    {
-        var_dump(TestBaseController::a1()->getValue());
+        $this->testRepository = $repository;
     }
 
-    public function test2()
+    public function create(Request $request)
     {
-      TestBaseController::$a->getValue();
+        $params = $this->validate($request, [
+            'name' => 'required|string',
+            'age'  => 'required|integer'
+        ]);
+
+        return $this->success($this->testRepository->create($params));
+
     }
 }
 
