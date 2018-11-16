@@ -8,6 +8,7 @@
 
 namespace App\Http\Controllers;
 
+use function GuzzleHttp\Promise\queue;
 use Illuminate\Http\Request;
 use App\Repository\TestRepository;
 
@@ -22,11 +23,11 @@ class TestController extends BaseController
 
     public function create(Request $request)
     {
+
         $params = $this->validate($request, [
             'name' => 'required|string',
             'age'  => 'required|integer'
         ]);
-
         return $this->success($this->testRepository->create($params));
 
     }
