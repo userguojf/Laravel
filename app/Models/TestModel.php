@@ -12,8 +12,8 @@ class TestModel extends BaseModel
     protected $table = 'test';
 
     public $timestamps = false;
-    protected $fillable = [
-        'name',
-        'age'
-        ];
+//    protected $fillable = [
+//        'name',
+//        'age'
+//        ];
 }

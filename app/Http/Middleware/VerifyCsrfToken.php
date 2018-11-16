@@ -19,7 +19,7 @@ class VerifyCsrfToken extends Middleware
      * @var array
      */
     protected $except = [
-        //
+        // 409 解决
         // added by guojf
         // https://laravel- china.org/docs/laravel/5.6/csrf/1365
         'stripe/*',

@@ -5,6 +5,7 @@ composer.lock
 README.md
 .gitignore
 .env.example
+.env
 phpunit.xml
 composer.json
 storage
