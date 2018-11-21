@@ -91,6 +91,13 @@ class Handler extends ExceptionHandler
             return response()->json($response);
         }
 
+//      服务端逻辑错误时抛出的异常（服务返回的code != 0）
+        if ($e instanceof \ErrorException) {
+            Log::warning($e->getMessage(), $context, 'service_logic_error_log');
+            $response['msg'] = $e->getMessage();
+            return response()->json($response);
+        }
+
 //      请求服务超时抛出的异常（默认连接5s，请求30s）
         if ($e instanceof ConnectException) {
             Log::error($e->getMessage(), $context, 'connect_timeout_log');

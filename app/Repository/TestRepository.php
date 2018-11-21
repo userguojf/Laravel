@@ -9,19 +9,21 @@ namespace App\Repository;
 
 use App\Models\TestModel;
 use App\Exceptions\ApiException;
+use App\Enum\TestEnum;
 
-class TestRepository
+class TestRepository extends BaseRepository
 {
         public function create(array $param):array
         {
             try{
                 TestModel::create([
-                    'name' => $param['name'],
+                    'name' => TestEnum::MyName()->getValue(),// $param['name'],
                     'age'  => $param['age']
                 ]);
             } catch (\Exception $e) {
                 throw new ApiException($e->getMessage());
             }
+
 
             return [];
         }

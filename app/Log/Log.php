@@ -22,7 +22,7 @@ class Log
     public static function getLogInstance()
     {
         if (null === static::$logInstance) {
-            static::$logInstance = new Logger('supply_trade_center');
+            static::$logInstance = new Logger('laravel');
         }
 
         return static::$logInstance;
