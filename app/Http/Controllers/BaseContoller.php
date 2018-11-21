@@ -3,13 +3,12 @@
  * Created by PhpStorm.
  * User: guojianfeng
  * Date: 2018/11/21
- * Time: 下午2:48
+ * Time: 下午2:51
  */
 
-namespace App\Repository;
+namespace App\Http\Controllers;
 
-class BaseRepository
+class BaseContoller
 {
 
 }
-
