@@ -11,7 +11,7 @@ use App\Models\TestModel;
 use App\Exceptions\ApiException;
 use App\Enum\TestEnum;
 
-class TestRepository extends BaseRepository
+class   TestRepository extends BaseRepository
 {
         public function create(array $param):array
         {
