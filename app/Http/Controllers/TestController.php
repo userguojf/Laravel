@@ -23,7 +23,7 @@ class TestController extends BaseController
 
     public function create(Request $request)
     {
-
+        echo phpinfo();exit();
         $params = $this->validate($request, [
             'name' => 'required|string',
             'age'  => 'required|integer'

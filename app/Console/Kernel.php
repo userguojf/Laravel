@@ -32,9 +32,9 @@ class Kernel extends ConsoleKernel
     {
         // $schedule->command('inspire')
         //          ->hourly();
-        $schedule->command('testCommand:test_name')
-            ->cron('* * * * *')
-            ->sendOutputTo($this->createLogFile('testCommand'));
+//        $schedule->command('testCommand:test_name')
+//            ->cron('* * * * *')
+//            ->sendOutputTo($this->createLogFile('testCommand'));
     }
 
     /**

@@ -17,5 +17,5 @@ Route::get('/', function () {
 
 /*-------------------------------- 测试相关 ----------------------------------*/
 $router->group(['prefix' => 'test'], function () use ($router) {
-    $router->post('/create', 'TestController@create');
+    $router->get('/create', 'TestController@create');
 });
