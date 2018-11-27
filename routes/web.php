@@ -19,3 +19,6 @@ Route::get('/', function () {
 $router->group(['prefix' => 'test'], function () use ($router) {
     $router->get('/create', 'TestController@create');
 });
+$router->group(['prefix' => 'php'], function () use ($router) {
+    $router->get('/', 'PhpInfoController@index');
+});
